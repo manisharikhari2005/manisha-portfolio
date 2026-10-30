@@ -1,0 +1,118 @@
+@import "tailwindcss";
+
+:root {
+  --background: #fff9f6;
+  --background-secondary: #f8eee8;
+
+  --card: #ffffff;
+
+  --primary: #d97882;
+  --primary-light: #f3c7c7;
+  --primary-soft: #fbe7e5;
+
+  --beige: #ebd9ce;
+
+  --text-primary: #292525;
+  --text-secondary: #756b68;
+
+  --border: #e8dcd6;
+
+  --icon-dark: #000000;
+  --icon-github: #181717;
+}
+
+.dark {
+  --background: #171315;
+  --background-secondary: #221b1d;
+
+  --card: #281f22;
+
+  --primary: #e58b96;
+  --primary-light: #f1b8be;
+  --primary-soft: #3a292d;
+
+  --beige: #dcc4b8;
+
+  --text-primary: #fff7f5;
+  --text-secondary: #c9bdb9;
+
+  --border: #3b3033;
+
+  --icon-dark: #ffffff;
+  --icon-github: #ffffff;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--text-primary);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Apply one font throughout the portfolio */
+*,
+*::before,
+*::after {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+::selection {
+  background: var(--primary-light);
+  color: var(--text-primary);
+}
+
+
+
+/* Small section label */
+.section-label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--primary);
+}
+
+/* Very subtle entrance animation */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-up {
+  animation: fadeUp 0.8s ease-out both;
+}
+
+.fade-up-delay-1 {
+  animation: fadeUp 0.8s 0.12s ease-out both;
+}
+
+.fade-up-delay-2 {
+  animation: fadeUp 0.8s 0.24s ease-out both;
+}
+
+/* Very subtle floating movement */
+@keyframes floatSoft {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.float-soft {
+  animation: floatSoft 5s ease-in-out infinite;
+}
